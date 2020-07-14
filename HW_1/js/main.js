@@ -1,51 +1,51 @@
-let lemon = 15.678;
-let apple = 123.965;
-let grape = 90.2345;
+const lemon = 15.678;
+const apple = 123.965;
+const grape = 90.2345;
 console.log( "Ціна на лимони =", lemon);
 console.log( "Ціна на яблука =", apple);
 console.log( "Ціна на виноград =", grape);
 
-let maxVal = Math.max ( lemon, apple, grape);
-let minVal = Math.min ( lemon, apple, grape);
+const maxVal = Math.max ( lemon, apple, grape);
+const minVal = Math.min ( lemon, apple, grape);
 console.log ("Максимальна ціна =", maxVal);
 console.log ("Мінімальна ціна =", minVal);
 
-let sum = lemon + apple + grape;
+const sum = lemon + apple + grape;
 console.log("Сума всіх товарів =", sum);
 
-let roudingLemonPrice = Math.floor(lemon);
-let roudingApplePrice = Math.floor(apple);
-let roudingGrapePrice = Math.floor(grape);
+const roudingLemonPrice = Math.floor(lemon);
+const roudingApplePrice = Math.floor(apple);
+const roudingGrapePrice = Math.floor(grape);
 console.log( "Заокруглена ціна на лимони =", roudingLemonPrice);
 console.log( "Заокруглена ціна на яблука =", roudingApplePrice);
 console.log( "Заокруглена ціна на виноград =", roudingGrapePrice);
 
-let sumRounding = Math.floor(lemon)+Math.floor(apple)+Math.floor(grape);
+const sumRounding = Math.floor(lemon)+Math.floor(apple)+Math.floor(grape);
 console.log("Сума заокруглених цін на продукти =",sumRounding);
 
-let roundingToHundreds = Math.round(sumRounding/100)*100;
+const roundingToHundreds = Math.round(sumRounding/100)*100;
 console.log("Сума заокруглена до сотень =", roundingToHundreds);
 
-let bool = (sumRounding % 2 == 0);
+const bool = (sumRounding % 2 == 0);
 console.log(bool);
 
-let money = 500;
-let change = (money - sum).toFixed(2);
+const money = 500;
+const change = (money - sum).toFixed(2);
 console.log("Решта з 500 =", change);
 
-let averagePrice = (sum / 3).toFixed(2);
+const averagePrice = (sum / 3).toFixed(2);
 console.log("Середнє значення цін =", averagePrice);
 
-let reduction = (Math.random()*100).toFixed(2);
+const reduction = (Math.random()*100).toFixed(2);
 console.log("Знижка =", reduction);
 
-let bidPrice = (Math.random()*sum).toFixed(2);
+const bidPrice = (Math.random()*sum).toFixed(2);
 console.log("Ціна покупки =", bidPrice);
 
-let theDiscountedPrice = (bidPrice - bidPrice*reduction/100).toFixed(2);
+const theDiscountedPrice = (bidPrice - bidPrice*reduction/100).toFixed(2);
 console.log("Ціна зі знижкою =", theDiscountedPrice);
 
-let netProfit = ((bidPrice / 2) - reduction).toFixed(2);
+const netProfit = ((bidPrice / 2) - reduction).toFixed(2);
 console.log("Чистий прибуток =", netProfit);
 
 document.write(`<p>1.Максимальна ціна = ${maxVal}</p> 
