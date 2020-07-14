@@ -5,8 +5,8 @@ console.log( "Ціна на лимони =", lemon);
 console.log( "Ціна на яблука =", apple);
 console.log( "Ціна на виноград =", grape);
 
-const maxVal = Math.max ( lemon, apple, grape);
-const minVal = Math.min ( lemon, apple, grape);
+const maxVal = Math.max (lemon, apple, grape);
+const minVal = Math.min (lemon, apple, grape);
 console.log ("Максимальна ціна =", maxVal);
 console.log ("Мінімальна ціна =", minVal);
 
@@ -30,7 +30,7 @@ const bool = (sumRounding % 2 == 0);
 console.log(bool);
 
 const money = 500;
-const change = (money - sum).toFixed(2);
+const change = (money - sum);
 console.log("Решта з 500 =", change);
 
 const averagePrice = (sum / 3).toFixed(2);
