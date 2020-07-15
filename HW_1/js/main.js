@@ -56,5 +56,6 @@ document.write(`<p>1.Максимальна ціна = ${maxVal}</p>
 				<p>6.${bool}</p>
 				<p>7.Решта з 500 = ${change}</p>
 				<p>8.Середнє значення цін = ${averagePrice}</p>
-				<p>9.Чистий прибуток = ${netProfit}</p>`);
+				<p>9.Ціна зі знижкою = ${theDiscountedPrice}</p>
+				<p>10.Чистий прибуток = ${netProfit}</p>`);
 
