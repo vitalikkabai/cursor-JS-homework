@@ -13,12 +13,12 @@ console.log ("Мінімальна ціна =", minVal);
 const sum = lemon + apple + grape;
 console.log("Сума всіх товарів =", sum);
 
-const roudingLemonPrice = Math.floor(lemon);
-const roudingApplePrice = Math.floor(apple);
-const roudingGrapePrice = Math.floor(grape);
-console.log( "Заокруглена ціна на лимони =", roudingLemonPrice);
-console.log( "Заокруглена ціна на яблука =", roudingApplePrice);
-console.log( "Заокруглена ціна на виноград =", roudingGrapePrice);
+const roudedPriceLemon = Math.floor(lemon);
+const roudedPriceApple = Math.floor(apple);
+const roudedPriceGrape = Math.floor(grape);
+console.log( "Заокруглена ціна на лимони =", roudedPriceLemon);
+console.log( "Заокруглена ціна на яблука =", roudedPriceApple);
+console.log( "Заокруглена ціна на виноград =", roudedPriceGrape);
 
 const sumRounding = Math.floor(lemon)+Math.floor(apple)+Math.floor(grape);
 console.log("Сума заокруглених цін на продукти =",sumRounding);
@@ -26,7 +26,7 @@ console.log("Сума заокруглених цін на продукти =",s
 const roundingToHundreds = Math.round(sumRounding/100)*100;
 console.log("Сума заокруглена до сотень =", roundingToHundreds);
 
-const bool = (sumRounding % 2 == 0);
+const bool = (sumRounding % 2 === 0);
 console.log(bool);
 
 const money = 500;
