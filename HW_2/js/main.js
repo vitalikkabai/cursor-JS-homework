@@ -1,25 +1,25 @@
 function summationNumbers() {
-    let numberN = parseFloat(prompt(`Введи будь яке ціле число N:`));
-    let numberM = parseFloat(prompt(`Введи будь яке ціле число M:`));
-    if (isNaN(numberN) || isNaN(numberM)) {
+    const fromFirstNumber = parseFloat(prompt(`Введи будь яке ціле число N:`));
+    const toSecondNumber = parseFloat(prompt(`Введи будь яке ціле число M:`));
+    if (isNaN(fromFirstNumber) || isNaN(toSecondNumber)) {
         alert("Уупс ти ввів не те що я просив, давай ще раз");
         summationNumbers();
     }
-    while (numberN >= numberM) {
-        alert(`Уупс число M менше бо рівне за N, твоє число N=${numberN}.`);
+    if (fromFirstNumber >= toSecondNumber) {
+        alert(`Уупс число M менше бо рівне за N, твоє число N=${fromFirstNumber}.`);
         summationNumbers();
     }
-    if (!Number.isInteger(numberN) || !Number.isInteger(numberM)) {
+    if (!Number.isInteger(fromFirstNumber) || !Number.isInteger(toSecondNumber)) {
         alert("Уупс ти ввів дробове число, давай ще раз");
         summationNumbers();
     }
-    console.log(numberN);
-    console.log(numberM);
-    const evenNumber = confirm('Враховувати парні числа? Якщо так натисність "OK",якщо ні "Скасувати"');
-    console.log(evenNumber);
+    console.log(fromFirstNumber, typeof(fromFirstNumber));
+    console.log(toSecondNumber, typeof(toSecondNumber));
+    const skipEven = confirm('Враховувати парні числа? Якщо так натисність "OK",якщо ні "Скасувати"');
+    console.log(skipEven);
     let sumNumbers = 0;
-    for (var i = numberN; i <= numberM; i++) {
-        if (i % 2 === 0 && evenNumber === false) {
+    for (var i = fromFirstNumber; i <= toSecondNumber; i++) {
+        if (i % 2 === 0 && skipEven === false) {
             continue;
         } else {
             sumNumbers += i;
@@ -28,3 +28,5 @@ function summationNumbers() {
     console.log(sumNumbers);
 }
 summationNumbers();
+
+
