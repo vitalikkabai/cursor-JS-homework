@@ -1,32 +1,28 @@
-function summationNumbers() {
-    const fromFirstNumber = parseFloat(prompt(`Введи будь яке ціле число N:`));
-    const toSecondNumber = parseFloat(prompt(`Введи будь яке ціле число M:`));
-    if (isNaN(fromFirstNumber) || isNaN(toSecondNumber)) {
-        alert("Уупс ти ввів не те що я просив, давай ще раз");
-        summationNumbers();
-    }
-    if (fromFirstNumber >= toSecondNumber) {
-        alert(`Уупс число M менше бо рівне за N, твоє число N=${fromFirstNumber}.`);
-        summationNumbers();
-    }
-    if (!Number.isInteger(fromFirstNumber) || !Number.isInteger(toSecondNumber)) {
-        alert("Уупс ти ввів дробове число, давай ще раз");
-        summationNumbers();
-    }
-    console.log(fromFirstNumber, typeof(fromFirstNumber));
-    console.log(toSecondNumber, typeof(toSecondNumber));
-    const skipEven = confirm('Враховувати парні числа? Якщо так натисність "OK",якщо ні "Скасувати"');
-    console.log(skipEven);
-    let sumNumbers = 0;
-    for (var i = fromFirstNumber; i <= toSecondNumber; i++) {
-        if (i % 2 === 0 && skipEven === false) {
+const form = document.getElementById('form');
+const error = document.getElementById('error');
+const resultTag = document.getElementById('result');
+
+const calculate = (fromFirstNumber, toSecondNumber, isEvenNumber) => {
+    let result = 0;
+    for (let i = fromFirstNumber; i <= toSecondNumber; i++) {
+        if (!isEvenNumber && !(i % 2)) {
             continue;
-        } else {
-            sumNumbers += i;
         }
+        result += i;
     }
-    console.log(sumNumbers);
-}
-summationNumbers();
+    return result;
+};
 
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
+    const fromFirstNumber = +event.target[0].value;
+    const toSecondNumber = +event.target[1].value;
+    const isEvenNumber = event.target[2].checked;
+
+    if (fromFirstNumber>= toSecondNumber) {
+        error.innerText = 'Число M має бути більше за число N';
+    } else {
+        resultTag.innerText = `Результат: ${calculate(fromFirstNumber, toSecondNumber, isEvenNumber)}`;
+    }
+});
