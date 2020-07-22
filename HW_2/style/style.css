@@ -16,3 +16,7 @@ form {
 #result {
 	color: green;
 }
+
+label {
+	padding: 5px;
+}
