@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
     const toSecondNumber = +event.target[1].value;
     const isEvenNumber = event.target[2].checked;
 
-    if (fromFirstNumber>= toSecondNumber) {
+    if (fromFirstNumber >= toSecondNumber) {
         error.innerText = 'Число M має бути більше за число N';
     } else {
         resultTag.innerText = `Результат: ${calculate(fromFirstNumber, toSecondNumber, isEvenNumber)}`;
