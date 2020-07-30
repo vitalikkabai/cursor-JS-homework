@@ -37,13 +37,10 @@ const addStudentsMarks = (students) => {
 const addStudentsPairMarks = () => {
 	let pairMarksArr = addStudentsPairSubject();
 	for (var i = 0; i < pairMarksArr.length; i++) {
-		pairMarksArr[i].push(Math.floor(Math.random()*5));
+		pairMarksArr[i].push(Math.floor((Math.random()*4)+1));
 	}
 	return pairMarksArr;
 }
-
-
-
 
 
 createStudentsPair(students);
@@ -52,9 +49,9 @@ console.log(createStudentsPair(students));
 addStudentsPairSubject();
 console.log(addStudentsPairSubject());
 
-addStudentsMarks (students);
-console.log(addStudentsMarks (students));
+addStudentsMarks(students);
+console.log(addStudentsMarks(students));
 
-addStudentsPairMarks ();
-console.log(addStudentsPairMarks ());
+addStudentsPairMarks();
+console.log(addStudentsPairMarks());
 
