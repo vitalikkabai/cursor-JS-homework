@@ -23,7 +23,7 @@ const secondResult = document.getElementById('secondResult');
 const raisingNumDegree = (initialNumber, degreeNumber) => {
     let numberInDegree = initialNumber;
     if (degreeNumber > 0) {
-        for (var i = 0; i < degreeNumber; i++) {
+        for (var i = 0; i < degreeNumber - 1; i++) {
             numberInDegree *= initialNumber;
         }
         return numberInDegree;
@@ -127,9 +127,9 @@ const sixthForm = document.getElementById('sixthForm');
 const sixthResult = document.getElementById('sixthResult');
 
 
-const howManyLettersinWord = (inputSring, removeLetter) => {
+const howManyLettersinWord = (inputSring, countsLetter) => {
     const inputSringArr = inputSring.toLowerCase().split('');
-    const tmpremoveLetter = removeLetter.toLowerCase();
+    const tmpremoveLetter = countsLetter.toLowerCase();
     let tmpCounterLetter = 0;
     for (var i = 0; i < inputSringArr.length; i++) {
         if (inputSringArr[i] === tmpremoveLetter) {
@@ -143,56 +143,164 @@ const howManyLettersinWord = (inputSring, removeLetter) => {
 sixthForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const inputSring = event.target[0].value;
-    const removeLetter = event.target[1].value;
-    sixthResult.innerText = `Функція №6: ${howManyLettersinWord (inputSring, removeLetter)}`;
+    const countsLetter = event.target[1].value;
+    sixthResult.innerText = `Функція №6: ${howManyLettersinWord (inputSring, countsLetter)}`;
 });
 
 
 // 6 функція
 
 
-
 const seventhForm = document.getElementById('seventhForm');
 const seventhResult = document.getElementById('seventhResult');
+const errorExchange = document.getElementById('errorExchange');
 
 
-const calcExchangeRates = (exchange) => {
-	
+const calcExchangeRates = (amount) => {
+    const moneyValue = parseFloat(amount);
+    const isUAH = amount.toLowerCase().includes('uah');
+    const isDollar = amount.includes('$');
+    let exchange = 0;
+    if (isDollar) {
+    	exchange = moneyValue*27.514;
+    	return (Math.floor(exchange*100)/100);
+    } else if (isUAH) {
+    	exchange = moneyValue/27.685;
+    	return (Math.floor(exchange*100)/100);
+    } else {
+    	 errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
+    }
+
 }
 
 seventhForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const exchange = event.target[0].value;
-    seventhResult.innerText = `Функція №7: ${calcExchangeRates (exchange)}`;
+    const amount = event.target[0].value;
+    seventhResult.innerText = `Функція №7: ${calcExchangeRates (amount)}`;
 });
 
 
+// Функція 7
 
-// Заюзай завтра toLoverCase до обох інпутів. А краще перепиши це для функції 9
-
-
-// const sixthForm = document.getElementById('sixthForm');
-// const sixthResult = document.getElementById('sixthResult');
-
-
-// const howManyLettersinWord = (inputSring, removeLetter) => {
-//     const inputSringArr = inputSring.split('');
-//     let tmpInputSringArr = inputSring.toLowerCase().split('');
-
-//     for (var i = 0; i < inputSringArr.length; i++) {
-//         if (tmpInputSringArr[i] === removeLetter) {
-//             inputSringArr.splice(i, 1);
-//         }
-//         console.log(inputSringArr[i]);
-//     }
-//     console.log(inputSringArr);
-//     return inputSringArr;
-// }
+const inputError = document.getElementsByTagName('inputError');
+const eightForm = document.getElementById('eightForm');
+const eightResult = document.getElementById('eightResult');
 
 
-// sixthForm.addEventListener("submit", (event) => {
-//     event.preventDefault();
-//     const inputSring = event.target[0].value;
-//     const removeLetter = event.target[1].value;
-//     sixthResult.innerText = `Функція №2: ${howManyLettersinWord (inputSring, removeLetter)}`;
-// });
+const getRandomPassword = (passwordLength) => {
+    let passwordArr = [];
+    for (var i = 0; i < passwordLength; i++) {
+        passwordArr[i] = Math.floor(Math.random() * 10);
+    }
+
+    return passwordArr.join('');
+}
+
+eightForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let passwordLength = event.target[0].value;
+    if (passwordLength === "") {
+        passwordLength = 8;
+        eightResult.innerText = `Функція №8: ${getRandomPassword(passwordLength)}`;
+    } else if (passwordLength < 0) {
+        inputError.innerText = 'Число має бути додатнє';
+    } else {
+        eightResult.innerText = `Функція №8: ${getRandomPassword(passwordLength)}`;
+    }
+
+
+});
+
+// Функція 8
+
+
+const ninthForm = document.getElementById('ninthForm');
+const ninthResult = document.getElementById('ninthResult');
+
+
+const deleteLetters = (initialString, removeLetter) => {
+    const initialStringArr = initialString.split('');
+    let tmpInitialStringArr = initialString.toLowerCase().split('');
+
+    for (var i = 0; i < initialStringArr.length; i++) {
+        if (tmpInitialStringArr[i] === removeLetter) {
+            initialStringArr.splice(i, 1);
+            tmpInitialStringArr.splice(i, 1);
+            i--;
+        }
+        console.log(initialStringArr[i]);
+    }
+    console.log(initialStringArr);
+    return initialStringArr.join('');
+}
+
+
+ninthForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const initialString = event.target[0].value;
+    const removeLetter = event.target[1].value;
+    ninthResult.innerText = `Функція №9: ${deleteLetters (initialString, removeLetter)}`;
+});
+
+
+// Функція 9
+
+const tenthForm = document.getElementById('tenthForm');
+const tenthResult = document.getElementById('tenthResult')
+
+
+
+
+const isPalyndrom = (inputText) => {
+    let inputTextArr = inputText.toLowerCase().split('');
+    for (var i = 0; i < inputTextArr.length; i++) {
+        if (inputTextArr[i] === " ") {
+            inputTextArr.splice(i, 1);
+            i--;
+        }
+    }
+
+    let tmpinputTextArr = inputTextArr.slice().reverse();
+
+    for (var i = 0; i < inputTextArr.length; i++) {
+        if (inputTextArr[i] !== tmpinputTextArr[i]) {
+            return false;
+        }
+    }
+
+    return true;
+
+    console.log(inputTextArr);
+    console.log(tmpinputTextArr);
+}
+
+tenthForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const inputText = event.target[0].value;
+    tenthResult.innerText = `Функція №10: ${isPalyndrom(inputText)}`;
+
+});
+
+
+const eleventhForm = document.getElementById('eleventhForm');
+const eleventhResult = document.getElementById('eleventhResult')
+
+
+const deleteDuplicateLetter = (inputText) => {
+	const inputTextArr = inputText.split('');
+	for (var i = 0; i < inputTextArr.length; i++) {
+		if (inputTextArr.includes(inputTextArr[i])) {
+			inputTextArr.splice(i, 1);
+			i--;
+		}
+	}
+
+	return inputTextArr;
+}
+
+eleventhForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const inputText = event.target[0].value;
+    eleventhResult.innerText = `Функція №11: ${deleteDuplicateLetter(inputText)}`;
+
+});

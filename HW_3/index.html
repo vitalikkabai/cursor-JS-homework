@@ -1,105 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>HW#3</title>
-	<link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <title>HW#3</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-	<form id="form">
-		<label>
-			<input id="number" type="number">
-		</label>
-		<button id="btn" type="submit">
+    <form id="form">
+        <p>Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.</p>
+        <label>
+            <input id="number" type="number">
+        </label>
+        <button id="btn" type="submit">
             Submit
         </button>
-        <p id="result"></p>
-	</form>
+        <p id="result" class="colorText"></p>
+    </form>
 
-
-
-	<form id="secondForm">
-		<label>
-			<input id="degreeNumber" type="number">
-		</label>
-		<label>
-			<input id="degree" type="number">
-		</label>
-		<button id="secondBtn" type="submit">
+    <form id="secondForm">
+        <p>Створити функцію, яка визначає ступінь числа.</p>
+        <label>
+            <input id="degreeNumber" type="number" placeholder="Число">
+        </label>
+        <label>
+            <input id="degree" type="number" placeholder="Степінь">
+        </label>
+        <button id="secondBtn" type="submit">
             Submit
         </button>
-        <p id="secondResult"></p>
-	</form>
+        <p id="secondResult" class="colorText"></p>
+    </form>
 
-
-
-	<form id="thirdForm">
-		<label>
-			<input id="text" type="text">
-		</label>
-		<button id="thirdBtn" type="submit">
+    <form id="thirdForm">
+        <p>Створити функцію, яка форматує ім'я, роблячи першу букву великою.</p>
+        <label>
+            <input id="text" type="text">
+        </label>
+        <button id="thirdBtn" type="submit">
             Submit
         </button>
-        <p id="thirdResult"></p>
-	</form>
+        <p id="thirdResult" class="colorText"></p>
+    </form>
 
-
-
-	<form id="fourthForm">
-		<label>
-			<input id="salary" type="number">
-		</label>
-		<button id="fourthBtn" type="submit">
+    <form id="fourthForm">
+        <p>Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати.</p>
+        <label>
+            <input id="salary" type="number">
+        </label>
+        <button id="fourthBtn" type="submit">
             Submit
         </button>
-        <p id="fourthResult"></p>
-	</form>
+        <p id="fourthResult" class="colorText"></p>
+    </form>
 
-
-
-	<form id="fifthForm">
-		<label>
-			<input id="salary" type="number">
-		</label>
-		<label>
-			<input id="salary" type="number">
-		</label>
-		<button id="fifthBtn" type="submit">
+    <form id="fifthForm">
+        <p>Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.</p>
+        <label>
+            <input id="salary" type="number">
+        </label>
+        <label>
+            <input id="salary" type="number">
+        </label>
+        <button id="fifthBtn" type="submit">
             Submit
         </button>
-        <p id="fifthResult"></p>
-        <p id="error"></p>
-	</form>
+        <p id="fifthResult" class="colorText"></p>
+        <p id="error" class="errorText"></p>
+    </form>
 
-
-
-	<form id="sixthForm">
-		<label>
-			<input id="inputSring" type="text">
-		</label>
-		<label>
-			<input id="removeLetter" type="text">
-		</label>
-		<button id="sixthBtn" type="submit">
+    <form id="sixthForm">
+        <p>Створити функцію, яка рахує скільки разів певна буква повторюється в слові.</p>
+        <label>
+            <input id="inputSring" type="text">
+        </label>
+        <label>
+            <input id="countsLetter" type="text">
+        </label>
+        <button id="sixthBtn" type="submit">
             Submit
         </button>
-        <p id="sixthResult"></p>
-	</form>
+        <p id="sixthResult" class="colorText"></p>
+    </form>
 
-
-	<form id="seventhForm">
-		<label>
-			<input id="salary" type="number">
-		</label>
-		<button id="seventhBtn" type="submit">
+    <form id="seventhForm">
+        <p>Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку.</p>
+        <label>
+            <input id="salary" type="text">
+        </label>
+        <button id="seventhBtn" type="submit">
             Submit
         </button>
-        <p id="seventhResult"></p>
-	</form>
+        <p id="seventhResult" class="colorText"></p>
+        <p id="errorExchange" class="errorText"></p>
+    </form>
 
+    <form id="eightForm">
+        <p>Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.</p>
+        <label>
+            <input id="text" type="number">
+        </label>
+        <button id="eightBtn" type="submit">
+            Submit
+        </button>
+        <p id="eightResult" class="colorText"></p>
+        <p id="inputError" class="error"></p>
+    </form>
 
+    <form id="ninthForm">
+        <p>Створіть функцію, яка видаляє всі букви з речення.</p>
+        <label>
+            <input id="initialString" type="text">
+        </label>
+        <label>
+            <input id="removeLetter" type="text">
+        </label>
+        <button id="ninthBtn" type="submit">
+            Submit
+        </button>
+        <p id="ninthResult" class="colorText"></p>
+    </form>
 
+    <form id="tenthForm">
+        <p>Створіть функцію, яка видаляє всі букви з речення.</p>
+        <label>
+            <input id="text" type="text">
+        </label>
+        <button id="tenthBtn" type="submit">
+            Submit
+        </button>
+        <p id="tenthResult" class="colorText"></p>
+    </form>
 
-	<script type="text/javascript" src="js/main.js"> </script>
+    <form id="eleventhForm">
+        <p>Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.</p>
+        <label>
+            <input id="text" type="text">
+        </label>
+        <button id="eleventhBtn" type="submit">
+            Submit
+        </button>
+        <p id="eleventhResult" class="colorText"></p>
+    </form>
+    <script type="text/javascript" src="js/main.js"> </script>
 </body>
+
 </html>
