@@ -13,8 +13,8 @@ form.addEventListener("submit", (event) => {
     resultTag.innerText = `Функція №1: ${getMaxDigit(inputNumber)}`;
 
 });
-// Функція 1
 
+// Функція 1
 
 const secondForm = document.getElementById('secondForm');
 const secondResult = document.getElementById('secondResult');
@@ -71,9 +71,7 @@ thirdForm.addEventListener("submit", (event) => {
 
 });
 
-
 // Функція 3
-
 
 const fourthForm = document.getElementById('fourthForm');
 const fourthResult = document.getElementById('fourthResult');
@@ -91,9 +89,7 @@ fourthForm.addEventListener("submit", (event) => {
     fourthResult.innerText = `Функція №4: ${salaryNet (salary)}`;
 });
 
-
 // Функція 4
-
 
 const fifthForm = document.getElementById('fifthForm');
 const fifthResult = document.getElementById('fifthResult');
@@ -118,10 +114,7 @@ fifthForm.addEventListener("submit", (event) => {
 
 });
 
-
 // Функція 5
-
-
 
 const sixthForm = document.getElementById('sixthForm');
 const sixthResult = document.getElementById('sixthResult');
@@ -147,9 +140,7 @@ sixthForm.addEventListener("submit", (event) => {
     sixthResult.innerText = `Функція №6: ${howManyLettersinWord (inputSring, countsLetter)}`;
 });
 
-
 // 6 функція
-
 
 const seventhForm = document.getElementById('seventhForm');
 const seventhResult = document.getElementById('seventhResult');
@@ -162,13 +153,13 @@ const calcExchangeRates = (amount) => {
     const isDollar = amount.includes('$');
     let exchange = 0;
     if (isDollar) {
-    	exchange = moneyValue*27.514;
-    	return (Math.floor(exchange*100)/100);
+        exchange = moneyValue * 27.514;
+        return (Math.floor(exchange * 100) / 100);
     } else if (isUAH) {
-    	exchange = moneyValue/27.685;
-    	return (Math.floor(exchange*100)/100);
+        exchange = moneyValue / 27.685;
+        return (Math.floor(exchange * 100) / 100);
     } else {
-    	 errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
+        errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
     }
 
 }
@@ -178,7 +169,6 @@ seventhForm.addEventListener("submit", (event) => {
     const amount = event.target[0].value;
     seventhResult.innerText = `Функція №7: ${calcExchangeRates (amount)}`;
 });
-
 
 // Функція 7
 
@@ -213,7 +203,6 @@ eightForm.addEventListener("submit", (event) => {
 
 // Функція 8
 
-
 const ninthForm = document.getElementById('ninthForm');
 const ninthResult = document.getElementById('ninthResult');
 
@@ -242,18 +231,14 @@ ninthForm.addEventListener("submit", (event) => {
     ninthResult.innerText = `Функція №9: ${deleteLetters (initialString, removeLetter)}`;
 });
 
-
 // Функція 9
 
 const tenthForm = document.getElementById('tenthForm');
 const tenthResult = document.getElementById('tenthResult')
 
-
-
-
 const isPalyndrom = (inputText) => {
     let inputTextArr = inputText.toLowerCase().split('');
-    for (var i = 0; i < inputTextArr.length; i++) {
+    for (let i = 0; i < inputTextArr.length; i++) {
         if (inputTextArr[i] === " ") {
             inputTextArr.splice(i, 1);
             i--;
@@ -262,7 +247,7 @@ const isPalyndrom = (inputText) => {
 
     let tmpinputTextArr = inputTextArr.slice().reverse();
 
-    for (var i = 0; i < inputTextArr.length; i++) {
+    for (let i = 0; i < inputTextArr.length; i++) {
         if (inputTextArr[i] !== tmpinputTextArr[i]) {
             return false;
         }
@@ -281,21 +266,39 @@ tenthForm.addEventListener("submit", (event) => {
 
 });
 
+// Функція 10
 
 const eleventhForm = document.getElementById('eleventhForm');
 const eleventhResult = document.getElementById('eleventhResult')
 
 
 const deleteDuplicateLetter = (inputText) => {
-	const inputTextArr = inputText.split('');
-	for (var i = 0; i < inputTextArr.length; i++) {
-		if (inputTextArr.includes(inputTextArr[i])) {
-			inputTextArr.splice(i, 1);
-			i--;
-		}
-	}
+    let inputTextArr = inputText.toLowerCase().split('');
+    let result = {};
+    const newTextArr = [];
 
-	return inputTextArr;
+    for (var i = 0; i < inputTextArr.length; i++) {
+        if (inputTextArr[i] === " ") {
+            inputTextArr.splice(i, 1);
+            i--;
+        }
+    }
+
+    for (let i = 0; i < inputTextArr.length; ++i) {
+        let a = inputTextArr[i];
+        if (result[a] != undefined)
+            ++result[a];
+        else
+            result[a] = 1;
+    }
+
+    for(let i in result){
+        if (result[i] < 2) {
+            newTextArr.push(i);
+        }
+    }
+    console.log(newTextArr);
+    return newTextArr.join('');
 }
 
 eleventhForm.addEventListener("submit", (event) => {
@@ -304,3 +307,5 @@ eleventhForm.addEventListener("submit", (event) => {
     eleventhResult.innerText = `Функція №11: ${deleteDuplicateLetter(inputText)}`;
 
 });
+
+// Функція 11
