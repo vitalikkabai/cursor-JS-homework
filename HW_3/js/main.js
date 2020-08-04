@@ -1,7 +1,6 @@
 const form = document.getElementById('form');
 const resultTag = document.getElementById('result');
 
-
 const getMaxDigit = (inputNumber) => {
     const maxNumber = Math.max(...(inputNumber.split('')));
     return maxNumber;
@@ -19,7 +18,6 @@ form.addEventListener("submit", (event) => {
 const secondForm = document.getElementById('secondForm');
 const secondResult = document.getElementById('secondResult');
 
-
 const raisingNumDegree = (initialNumber, degreeNumber) => {
     let numberInDegree = initialNumber;
     if (degreeNumber > 0) {
@@ -34,7 +32,7 @@ const raisingNumDegree = (initialNumber, degreeNumber) => {
         numberInDegree = (1 / numberInDegree);
         return numberInDegree;
     } else {
-        numberInDegree = 0;
+        numberInDegree = 1;
         return numberInDegree;
     }
 
@@ -51,7 +49,6 @@ secondForm.addEventListener("submit", (event) => {
 
 const thirdForm = document.getElementById('thirdForm');
 const thirdResult = document.getElementById('thirdResult');
-
 
 const firstLetterUpperCase = (inputText) => {
     const wordToArray = inputText.split('');
@@ -76,7 +73,6 @@ thirdForm.addEventListener("submit", (event) => {
 const fourthForm = document.getElementById('fourthForm');
 const fourthResult = document.getElementById('fourthResult');
 
-
 const salaryNet = (salary) => {
     let finalSalary = salary;
     finalSalary -= (finalSalary * 0.195);
@@ -96,7 +92,7 @@ const fifthResult = document.getElementById('fifthResult');
 const error = document.getElementById('error');
 
 const getRandomInt = (fromFirstNumber, toSecondNumber) => {
-    return Math.floor(Math.random() * (toSecondNumber - fromFirstNumber)) + fromFirstNumber;
+    return Math.floor(Math.random() * (toSecondNumber - fromFirstNumber+1)) + fromFirstNumber;
 }
 
 fifthForm.addEventListener("submit", (event) => {
@@ -118,7 +114,6 @@ fifthForm.addEventListener("submit", (event) => {
 
 const sixthForm = document.getElementById('sixthForm');
 const sixthResult = document.getElementById('sixthResult');
-
 
 const howManyLettersinWord = (inputSring, countsLetter) => {
     const inputSringArr = inputSring.toLowerCase().split('');
@@ -145,7 +140,6 @@ sixthForm.addEventListener("submit", (event) => {
 const seventhForm = document.getElementById('seventhForm');
 const seventhResult = document.getElementById('seventhResult');
 const errorExchange = document.getElementById('errorExchange');
-
 
 const calcExchangeRates = (amount) => {
     const moneyValue = parseFloat(amount);
@@ -176,7 +170,6 @@ const inputError = document.getElementsByTagName('inputError');
 const eightForm = document.getElementById('eightForm');
 const eightResult = document.getElementById('eightResult');
 
-
 const getRandomPassword = (passwordLength) => {
     let passwordArr = [];
     for (var i = 0; i < passwordLength; i++) {
@@ -205,7 +198,6 @@ eightForm.addEventListener("submit", (event) => {
 
 const ninthForm = document.getElementById('ninthForm');
 const ninthResult = document.getElementById('ninthResult');
-
 
 const deleteLetters = (initialString, removeLetter) => {
     const initialStringArr = initialString.split('');
@@ -271,7 +263,6 @@ tenthForm.addEventListener("submit", (event) => {
 const eleventhForm = document.getElementById('eleventhForm');
 const eleventhResult = document.getElementById('eleventhResult')
 
-
 const deleteDuplicateLetter = (inputText) => {
     let inputTextArr = inputText.toLowerCase().split('');
     let result = {};
@@ -292,7 +283,7 @@ const deleteDuplicateLetter = (inputText) => {
             result[a] = 1;
     }
 
-    for(let i in result){
+    for (let i in result) {
         if (result[i] < 2) {
             newTextArr.push(i);
         }
