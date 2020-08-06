@@ -152,16 +152,23 @@ const calcExchangeRates = (amount) => {
     } else if (isUAH) {
         exchange = moneyValue / 27.685;
         return (Math.floor(exchange * 100) / 100);
-    } else {
-        errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
-    }
+     } //else {
+    //     errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
+    // }
 
 }
 
 seventhForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const amount = event.target[0].value;
-    seventhResult.innerText = `Функція №7: ${calcExchangeRates (amount)}`;
+    if(parseFloat(amount)<0){
+        errorExchange.innerText = 'Ви ввели не правильне значення, спробуйте ще раз';
+    } else{
+        seventhResult.innerText = `Функція №7: ${calcExchangeRates (amount)}`;
+    }
+
+
+    
 });
 
 // Функція 7
