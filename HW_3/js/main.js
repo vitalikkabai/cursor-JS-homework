@@ -290,6 +290,7 @@ const deleteDuplicateLetter = (inputText) => {
             result[a] = 1;
     }
 
+
     for (let i in result) {
         if (result[i] < 2) {
             newTextArr.push(i);
