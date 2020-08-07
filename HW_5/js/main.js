@@ -90,6 +90,7 @@ const getDividedByFive = (randomArr) => {
     return DividedByFive;
 }
 
+// Функція 7
 
 firstForm.addEventListener("submit", (event) => {
     event.preventDefault();
