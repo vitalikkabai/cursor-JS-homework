@@ -81,9 +81,9 @@ const filterEvenNumbers = (randomArr) => {
 // Функція 5
 
 const getDividedByFive = (randomArr) => {
-  DividedByFive = [];
+    DividedByFive = [];
     randomArr.forEach((number) => {
-        if (number%5 === 0) {
+        if (number % 5 === 0) {
             DividedByFive.push(number);
         }
     });
@@ -104,12 +104,13 @@ firstForm.addEventListener("submit", (event) => {
             firstError.innerText = "Введіть max більшим ніж min";
         } else {
             firstResult.innerText = `Функція №1: [${randomArr}]`;
+            secondResult.innerText = `Функція №2: Мода:${getModa(randomArr)}`;
+            thirdResult.innerText = `Функція №3: Середнє арифметичне: ${getAverage(randomArr)}`;
+            fourthResult.innerText = `Функція №4: Медіана: ${getMedian(randomArr)}`;
+            fifthResult.innerText = `Функція №5: Непарні числа масиву: ${filterEvenNumbers(randomArr)}`;
+            seventhResult.innerText = `Функція №7: Числа які націло діляться на 5: ${getDividedByFive(randomArr)}`;
         }
     }
-    secondResult.innerText = `Функція №2: Мода:${getModa(randomArr)}`;
-    thirdResult.innerText = `Функція №3: Середнє арифметичне: ${getAverage(randomArr)}`;
-    fourthResult.innerText = `Функція №4: Медіана: ${getMedian(randomArr)}`;
-    fifthResult.innerText = `Функція №5: Непарні числа масиву: ${filterEvenNumbers(randomArr)}`;
-    seventhResult.innerText = `Функція №7: Числа які націло діляться на 5: ${getDividedByFive(randomArr)}`;
+
 
 });
