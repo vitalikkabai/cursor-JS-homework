@@ -7,13 +7,8 @@ const fourthResult = document.getElementById('fourthResult');
 const fifthResult = document.getElementById('fifthResult');
 const seventhResult = document.getElementById('seventhResult');
 
-const getRandomArray = (length, minValue, maxValue) => {
-    const randomMass = [];
-    for (var i = 0; i < length; i++) {
-        randomMass.push(Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue);
-    }
-    return randomMass;
-}
+const getRandomArray = (length, minValue, maxValue) => Array.from({ length }).map(() => Math.round(minValue - 0.5 + Math.random() * (maxValue - minValue + 1)) );
+
 
 //Функція 1
 
@@ -69,25 +64,13 @@ const getMedian = (randomArr) => {
 // Функція 4
 
 const filterEvenNumbers = (randomArr) => {
-    oddMass = [];
-    randomArr.forEach((number) => {
-        if (number % 2) {
-            oddMass.push(number);
-        }
-    });
-    return oddMass;
-}
+    return oddMass = randomArr.filter(num => num%2);
+};
 
 // Функція 5
 
 const getDividedByFive = (randomArr) => {
-    DividedByFive = [];
-    randomArr.forEach((number) => {
-        if (number % 5 === 0) {
-            DividedByFive.push(number);
-        }
-    });
-    return DividedByFive;
+    return dividedByFive = randomArr.filter(num => num%5 === 0);
 }
 
 // Функція 7
