@@ -35,27 +35,27 @@ class Student {
 
 const student = new Student('НУЛП', 2, 'Петро Хома');
 
-console.log(student.getInfo());
-console.log(student.marks);
+console.log("Сукупна інформація про студента:", student.getInfo());
+console.log("Оцінки студента:", student.marks);
 student.marks = 5;
-console.log(student.marks);
-console.log(student.getAverageMark());
+console.log("Змінені оцінки студента:", student.marks);
+console.log("Заокруглена середня оцінка студента:", student.getAverageMark());
 
-console.log(student.dismiss());
+console.log("Студента вигнали?", student.dismiss());
 
-console.log(student.getInfo());
-console.log(student.marks);
+console.log("Сукупна інформація про студента:", student.getInfo());
+console.log("Оцінки студента:", student.marks);
 student.marks = 5;
-console.log(student.marks);
-console.log(student.getAverageMark());
+console.log("Змінені оцінки студента:", student.marks);
+console.log("Заокруглена середня оцінка студента:", student.getAverageMark());
 
-console.log(student.recover());
+console.log("Студента вигнали?", student.recover());
 
-console.log(student.getInfo());
-console.log(student.marks);
+console.log("Сукупна інформація про студента:", student.getInfo());
+console.log("Оцінки студента:", student.marks);
 student.marks = 5;
-console.log(student.marks);
-console.log(student.getAverageMark());
+console.log("Змінені оцінки студента:", student.marks);
+console.log("Заокруглена середня оцінка студента:", student.getAverageMark());
 
 class BudgetStudent extends Student {
     constructor(university, course, fullName) {
