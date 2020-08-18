@@ -31,9 +31,6 @@ function getMySalary() {
     return JSON.stringify({ salary, taxes, profit });
 }
 
-
-
-
 firstForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const country = event.target[0].value;
@@ -46,5 +43,7 @@ firstForm.addEventListener("submit", (event) => {
     }
     secondResult.innerText = `Функція №2: ${getMiddleTaxes.call(eval(country))}`;
     thirdResult.innerText = `Функція №3: ${getTotalTaxes.call(eval(country))}`;
-    fourthResult.innerText = `Функція №4: ${getMySalary.call(eval(country))}`;
+    fourthResult.innerText = `Функція №4: ${setTimeout(function() { 
+        return getMySalary.call(eval(country))}, 10000
+        )}`;
 });
