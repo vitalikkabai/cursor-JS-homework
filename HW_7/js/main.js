@@ -15,6 +15,6 @@ function getTotalTaxes() {
 function getMySalary() {
     const salary = Math.floor(Math.random() * 501 + 1500);
     const taxes = Math.round((salary * this.tax) * 100) / 100;
-    const profit = salary - taxes;
+    const profit = Math.round((salary - taxes) * 100) / 100;
     console.log(JSON.stringify({ salary, taxes, profit })) ;
 }
