@@ -16,11 +16,11 @@ class Student {
     }
 
     set marks(mark) {
-        return this.studentDismiss ? null : this.studentsMarks.push(mark);
+        this.studentDismiss ? null : this.studentsMarks.push(mark);
     }
 
     getAverageMark() {
-        return Math.round(this.studentDismiss ? null : this.studentsMarks.reduce((acc, el) => acc + el) / this.studentsMarks.length);
+        return Math.round(this.studentDismiss ? null : this.studentsMarks.reduce((acc, el) => {return acc + el}, 0) / this.studentsMarks.length);
     }
 
     dismiss() {
@@ -59,9 +59,12 @@ console.log("Заокруглена середня оцінка студента
 
 class BudgetStudent extends Student {
     constructor(university, course, fullName) {
-        super(university, course, fullName);
-        if (!this.studentDismiss && this.getAverageMark() >= 4) {
-            setInterval(() => this.getScholarship(), 30000);
+        super(university, course, fullName); {
+            setInterval(() => {
+                if (!this.studentDismiss && this.getAverageMark() >= 4) {
+                    this.getScholarship()
+                }
+            }, 30000);
         }
     }
 
