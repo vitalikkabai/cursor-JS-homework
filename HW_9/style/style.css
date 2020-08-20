@@ -3,9 +3,11 @@
 	height: 250px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 body {
+	background-color: black;
 	display: flex;
 	align-items: center;
 	justify-content: center;

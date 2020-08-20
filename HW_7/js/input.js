@@ -12,16 +12,17 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 
 firstForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const country = event.target[0].value;
+    const countrySring = event.target[0].value;
     const salary = event.target[1].value;
-
+    const country = eval(countrySring);
     if (salary > 0) {
-        firstResult.innerText = `Функція №1: ${getMyTaxes.call(eval(country), salary)}`;
+        firstResult.innerText = `Функція №1: ${getMyTaxes.call(country, salary)}`;
     } else {
         firstError.innerText = "Зарплата введена від'ємною, спробуйте ще раз";
     }
-    secondResult.innerText = `Функція №2: ${getMiddleTaxes.call(eval(country))}`;
-    thirdResult.innerText = `Функція №3: ${getTotalTaxes.call(eval(country))}`;
+    secondResult.innerText = `Функція №2: ${getMiddleTaxes.call(country)}`;
+    thirdResult.innerText = `Функція №3: ${getTotalTaxes.call(country)}`;
     fourthResult.innerText = `Функція №4: Знаходиться в консолі `;
-    setInterval(function() {getMySalary.call(eval(country))}, 10000);
+    getMySalary(country);
 });
+
