@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	border: 1px solid black;
+	border: 0px solid black;
 	background:#e1cdb4;
 	font-family: 'Raleway', bold;
 }
@@ -38,6 +38,10 @@ header img {
 	flex-direction: column;
 }
 
+.foo > span {
+	pointer-events: none;
+}
+
 .img-container div span{
 	margin-bottom: 0px;
 	text-align: center;
@@ -54,3 +58,5 @@ section {
 	height: 40%;
 	width: 100vw;
 }
+
+

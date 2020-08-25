@@ -1,7 +1,23 @@
-const chordsA = document.getElementById('A');
-const foo = document.querySelector(".foo");
-//.play();
+const audioNodeList = document.querySelectorAll('audio');
+console.log("button:", audioNodeList);
 
-foo.addEventListener('click', function playM() {
-    chordsA.play();
+document.addEventListener('keydown', (event) => {
+    audioNodeList.forEach(function(element) {
+    	if (element.id == event.keyCode) {
+    		element.play();
+    	}
+    });
+})
+
+const buttonNodeList = document.querySelectorAll('.button');
+
+document.addEventListener('click', (event) => {
+    console.log(event);
+    if (event.target.closest('.button')) {
+        buttonNodeList.forEach(function(element, index) {
+            if (element.lastElementChild.innerText == event.path[1].lastElementChild.innerHTML) {
+                audioNodeList[index].play();
+            }
+        });
+    }
 })
