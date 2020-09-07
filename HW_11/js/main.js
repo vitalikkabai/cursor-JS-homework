@@ -7,8 +7,6 @@ const getRandomChinese = (length) => {
             let result = "";
             let count = 0
             for (var i = 0; i < length; i++) {
-
-
                 setTimeout(() => {
                     result += getChineseChar();
                     count++;
@@ -20,9 +18,6 @@ const getRandomChinese = (length) => {
         } else {
         	reject();	
         }
-
-
-
     });
 }
 
