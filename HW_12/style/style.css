@@ -1,0 +1,88 @@
+body {
+    background: url(../img/rXQiLcfc89vp3EbYQ58ERH-1200-80.jpeg);
+    color: gold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.logo {
+	width: 200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+#planetForm {
+	display: flex;
+	justify-content: center;
+	margin: 25px;
+}
+
+.buttonStyle {
+	outline: none;
+	font-family: 'Press Start 2P', cursive;
+	color: gold;
+	background: none;
+	border: 1px solid gold;
+	padding: 10px;
+}
+
+
+.characters {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+.charactersElement {
+    width: 300px;
+    border: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h4>i {
+    font-size: 25px;
+}
+
+#characterForm {
+	display: flex;
+	width: 400px;
+	justify-content: space-around;
+	margin: auto;
+}
+
+.planetsElement {
+    border: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputLable {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+}
+
+#part {
+	height: 100%;
+	background: grey;
+	border: 1px solid gold;
+}
+
+.charactersElement>img {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.swg-starwars {
+	color: yellow;
+	font-size: 25px;
+}
