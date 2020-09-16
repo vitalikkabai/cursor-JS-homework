@@ -1,4 +1,4 @@
-const BASE = 'https://swapi.dev/api/';
+const BASE = 'http://swapi.dev/api/';
 
 const characterButton = document.getElementById('characterButton');
 const characterForm = document.getElementById('characterForm')
@@ -14,7 +14,7 @@ characterForm.addEventListener("submit", (event) => {
             characters.removeChild(characters.firstChild);
         }
         charactersInfoArr.forEach((element) => {
-            axios.get(element).then((result) => {
+            axios.get(element.replace('http', 'https')).then((result) => {
                 const charactersElement = document.createElement('div');
                 charactersElement.className = 'charactersElement';
                 charactersElement.innerHTML = `
