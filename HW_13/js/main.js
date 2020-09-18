@@ -22,35 +22,28 @@ function* createIdGenerator() {
 const buttonUp = document.getElementById('upText');
 const buttonDown = document.getElementById('downText');
 const testingText = document.getElementById('testingText');
-const fontGenerator = newFontGenerator();
+const fontGenerator = newFontGenerator(14);
 
 
 buttonUp.addEventListener("click", () => {
-    testingText.style.fontSize = `${fontGenerator.next("up").value}px`;
+    fontGenerator.next("up").value;
 });
 
 buttonDown.addEventListener("click", () => {
-    testingText.style.fontSize = `${fontGenerator.next("down").value}px`;
+    fontGenerator.next("down").value;
 
 });
 
-function* newFontGenerator() {
-    let fontIndex = 14;
-    let tmp = yield fontIndex;
-    if (tmp === "up") {
-        while (true) {            
+function* newFontGenerator(fontIndex) {
+    let tmp;  
+    while (true) {
+        tmp = yield testingText.style.fontSize = `${fontIndex}px`;
+        if (tmp === "up") {
             fontIndex += 2;
-            yield fontIndex;
 
-        }
-    } else if (tmp === "down") {
-        while (true) {
+        } else if (tmp === "down") {
             fontIndex -= 2;
-            yield fontIndex;
-
         }
     }
-
-
 
 }
