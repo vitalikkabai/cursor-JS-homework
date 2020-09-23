@@ -13,7 +13,7 @@ const calculate = (fromFirstNumber, toSecondNumber, isEvenNumber) => {
     return result;
 };
 
-form.addEventListener("submit", (event) => {
+export default form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const fromFirstNumber = +event.target[0].value;
@@ -26,3 +26,4 @@ form.addEventListener("submit", (event) => {
         resultTag.innerText = `Результат: ${calculate(fromFirstNumber, toSecondNumber, isEvenNumber)}`;
     }
 });
+
