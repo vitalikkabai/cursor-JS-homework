@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/css/main.05002c4c.chunk.css",
+    "main.js": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/main.7ed5f9f0.chunk.js",
+    "main.js.map": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/main.7ed5f9f0.chunk.js.map",
+    "runtime-main.js": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/runtime-main.ad4abdd3.js",
+    "runtime-main.js.map": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/runtime-main.ad4abdd3.js.map",
+    "static/js/2.6eaadabc.chunk.js": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js",
+    "static/js/2.6eaadabc.chunk.js.map": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js.map",
+    "index.html": "/vitalikkabai/cursor-JS-homework/HW_15.git/index.html",
+    "precache-manifest.46fc7d21728b197f4c724c2de1b05d1a.js": "/vitalikkabai/cursor-JS-homework/HW_15.git/precache-manifest.46fc7d21728b197f4c724c2de1b05d1a.js",
+    "service-worker.js": "/vitalikkabai/cursor-JS-homework/HW_15.git/service-worker.js",
+    "static/css/main.05002c4c.chunk.css.map": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/css/main.05002c4c.chunk.css.map",
+    "static/js/2.6eaadabc.chunk.js.LICENSE.txt": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js.LICENSE.txt",
+    "static/media/twitter-verified-badge.svg": "/vitalikkabai/cursor-JS-homework/HW_15.git/static/media/twitter-verified-badge.96c76035.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad4abdd3.js",
+    "static/js/2.6eaadabc.chunk.js",
+    "static/css/main.05002c4c.chunk.css",
+    "static/js/main.7ed5f9f0.chunk.js"
+  ]
+}
