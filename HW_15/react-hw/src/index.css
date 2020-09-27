@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.post {
+  height: 430px;
+  width: 744px;
+  background-color: #16202a;
+  margin: auto;
+}
+
+.postsHeader {
+  padding-top: 10px;
+  display: flex;
+  height: 72px;
+  width: 100%;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  height: 72px;
+  width: 88px;
+  padding: 0;
+}
+
+.img {
+  width: 63px;
+  height: 63px;
+  background-color: yellow;
+  border-radius: 50px;
+}
+
+.postsInfo {
+  height: 72px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.personInfo {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  color: #fffffe;
+}
+
+.postsMassage {
+  display: flex;
+  align-items: center;
+  color: #fffffe;
+}
+
+.verifiedAccSvg {
+  width: 20px;
+  margin-top: 7px;
+}
+
+.personInfo > span {
+  padding-right: 5px;
+}
+
+.moreButton {
+  margin-right: 20px;
+  margin-left: auto;
+  height: 10px;
+  width: 10px;
+  border-bottom: 3px solid #8596a2;
+  border-right: 3px solid #8596a2;
+  transform: rotate(45deg);
+}
+.boldFont {
+  font-weight: bold;
+}
+.greyFonts {
+  color: #8596a2;
+}
+
+.postsImg {
+  width: 640px;
+  height: 306px;
+  margin-left: 87px;
+  border-radius: 20px;
+}
+
+.arialLable {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.svgIMG {
+  margin-top: 5px;
+  width: 27px;
+  height: 27px;
+  fill: #8596a2;
+}
+
+.arialLable div {
+  display: flex;
+  height: 27px;
+  align-items: center;
+}
+
+.arialLable p {
+  color: #8596a2;
+}
