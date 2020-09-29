@@ -2,7 +2,7 @@
   "name": "react-hw",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vitalikkabai.github.io/cursor-react-homework/",
+  "homepage": "https://github.com/vitalikkabai/cursor-react-homework/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
