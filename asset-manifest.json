@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/cursor-JS-homework/HW_15.git/static/css/main.05002c4c.chunk.css",
-    "main.js": "/cursor-JS-homework/HW_15.git/static/js/main.86a1e6d7.chunk.js",
-    "main.js.map": "/cursor-JS-homework/HW_15.git/static/js/main.86a1e6d7.chunk.js.map",
-    "runtime-main.js": "/cursor-JS-homework/HW_15.git/static/js/runtime-main.891e6612.js",
-    "runtime-main.js.map": "/cursor-JS-homework/HW_15.git/static/js/runtime-main.891e6612.js.map",
-    "static/js/2.6eaadabc.chunk.js": "/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js",
-    "static/js/2.6eaadabc.chunk.js.map": "/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js.map",
-    "index.html": "/cursor-JS-homework/HW_15.git/index.html",
-    "precache-manifest.ba00b62055e12cc197e9b76cccb6dfd6.js": "/cursor-JS-homework/HW_15.git/precache-manifest.ba00b62055e12cc197e9b76cccb6dfd6.js",
-    "service-worker.js": "/cursor-JS-homework/HW_15.git/service-worker.js",
-    "static/css/main.05002c4c.chunk.css.map": "/cursor-JS-homework/HW_15.git/static/css/main.05002c4c.chunk.css.map",
-    "static/js/2.6eaadabc.chunk.js.LICENSE.txt": "/cursor-JS-homework/HW_15.git/static/js/2.6eaadabc.chunk.js.LICENSE.txt",
-    "static/media/twitter-verified-badge.svg": "/cursor-JS-homework/HW_15.git/static/media/twitter-verified-badge.96c76035.svg"
+    "main.css": "/cursor-react-homework/static/css/main.05002c4c.chunk.css",
+    "main.js": "/cursor-react-homework/static/js/main.9fa975bf.chunk.js",
+    "main.js.map": "/cursor-react-homework/static/js/main.9fa975bf.chunk.js.map",
+    "runtime-main.js": "/cursor-react-homework/static/js/runtime-main.a9b3b393.js",
+    "runtime-main.js.map": "/cursor-react-homework/static/js/runtime-main.a9b3b393.js.map",
+    "static/js/2.6eaadabc.chunk.js": "/cursor-react-homework/static/js/2.6eaadabc.chunk.js",
+    "static/js/2.6eaadabc.chunk.js.map": "/cursor-react-homework/static/js/2.6eaadabc.chunk.js.map",
+    "index.html": "/cursor-react-homework/index.html",
+    "precache-manifest.f20ac1f636b7818930dc882986f761dc.js": "/cursor-react-homework/precache-manifest.f20ac1f636b7818930dc882986f761dc.js",
+    "service-worker.js": "/cursor-react-homework/service-worker.js",
+    "static/css/main.05002c4c.chunk.css.map": "/cursor-react-homework/static/css/main.05002c4c.chunk.css.map",
+    "static/js/2.6eaadabc.chunk.js.LICENSE.txt": "/cursor-react-homework/static/js/2.6eaadabc.chunk.js.LICENSE.txt",
+    "static/media/twitter-verified-badge.svg": "/cursor-react-homework/static/media/twitter-verified-badge.96c76035.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.891e6612.js",
+    "static/js/runtime-main.a9b3b393.js",
     "static/js/2.6eaadabc.chunk.js",
     "static/css/main.05002c4c.chunk.css",
-    "static/js/main.86a1e6d7.chunk.js"
+    "static/js/main.9fa975bf.chunk.js"
   ]
 }
