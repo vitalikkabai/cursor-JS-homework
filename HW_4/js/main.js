@@ -54,5 +54,3 @@ console.log(addStudentsMarks(students));
 
 addStudentsPairMarks();
 console.log(addStudentsPairMarks());
-
-export default addStudentsPairMarks();
