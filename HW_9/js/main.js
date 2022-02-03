@@ -18,7 +18,7 @@ const generateBlocks = () => {
 
 generateBlocks();
 
-export default setInterval(function generateBlocksInterval() {
+setInterval(function generateBlocksInterval() {
     const colorBlockList = document.getElementsByClassName("colorBlock");
     for (var i = 0; i < colorBlockList.length; i++) {
         colorBlockList[i].style.backgroundColor = `${generateRandomColor()}`;
